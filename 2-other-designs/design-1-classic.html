@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Radhika Bhavan – The Banquet Hall | Waghodia, Vadodara | Since 2001</title>
+<meta name="description" content="Radhika Bhavan – The Banquet Hall, Waghodia Road, Vadodara. 25 years of celebrations, 1000+ happy weddings, 3 banquet halls, 15 guest rooms. Rated 4.6★ on Google.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --maroon:#4A0E14;
+  --maroon-2:#6B1420;
+  --gold:#C9A227;
+  --gold-light:#E8CE7A;
+  --cream:#FAF5EC;
+  --ivory:#FFFDF8;
+  --ink:#2E1B15;
+  --muted:#7A6A5C;
+  --serif:'Cormorant Garamond',serif;
+  --sans:'Poppins',sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);color:var(--ink);background:var(--cream);font-size:16px;line-height:1.7;font-weight:300}
+img{max-width:100%;display:block}
+h1,h2,h3,h4{font-family:var(--serif);font-weight:600;line-height:1.15;color:var(--maroon)}
+.container{max-width:1150px;margin:0 auto;padding:0 24px}
+section{padding:90px 0}
+
+/* ---------- ornaments ---------- */
+.eyebrow{font-family:var(--sans);font-size:12px;letter-spacing:4px;text-transform:uppercase;color:var(--gold);font-weight:500;margin-bottom:14px}
+.section-title{font-size:clamp(32px,4.5vw,48px);margin-bottom:18px}
+.divider{display:flex;align-items:center;justify-content:center;gap:12px;margin:18px auto 40px;width:220px}
+.divider::before,.divider::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,transparent,var(--gold))}
+.divider::after{background:linear-gradient(90deg,var(--gold),transparent)}
+.divider .diamond{width:9px;height:9px;background:var(--gold);transform:rotate(45deg);flex:none}
+.center{text-align:center}
+
+/* ---------- reveal animations ---------- */
+.reveal{opacity:0;transform:translateY(34px);transition:opacity .9s ease,transform .9s ease}
+.reveal.visible{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){
+  .reveal{opacity:1;transform:none;transition:none}
+  *{animation:none!important;transition:none!important}
+}
+
+/* ---------- nav ---------- */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(74,14,20,.92);backdrop-filter:blur(10px);border-bottom:1px solid rgba(201,162,39,.35)}
+.nav-inner{max-width:1150px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between}
+.brand{font-family:var(--serif);color:var(--gold-light);font-size:22px;font-weight:600;letter-spacing:1px;text-decoration:none}
+.brand small{display:block;font-family:var(--sans);font-size:9px;letter-spacing:3px;color:#d9c9a3;font-weight:400;text-transform:uppercase}
+.nav-links{display:flex;gap:26px;list-style:none}
+.nav-links a{color:#f3e9d5;text-decoration:none;font-size:13px;letter-spacing:1px;transition:color .3s}
+.nav-links a:hover,.nav-links a:focus{color:var(--gold-light)}
+.nav-toggle{display:none;background:none;border:none;color:var(--gold-light);font-size:26px;cursor:pointer}
+@media(max-width:820px){
+  .nav-links{display:none;position:absolute;top:100%;left:0;right:0;background:var(--maroon);flex-direction:column;padding:20px 24px;gap:16px;border-bottom:1px solid rgba(201,162,39,.35)}
+  .nav-links.open{display:flex}
+  .nav-toggle{display:block}
+}
+
+/* ---------- hero ---------- */
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;overflow:hidden;background:var(--maroon);padding:120px 24px 80px}
+.hero-bg{position:absolute;inset:0;background:
+  radial-gradient(ellipse at 20% 20%,rgba(201,162,39,.22),transparent 55%),
+  radial-gradient(ellipse at 80% 75%,rgba(232,206,122,.14),transparent 50%),
+  linear-gradient(160deg,#3a0a10 0%,#4A0E14 45%,#5d1019 100%);
+  animation:kenburns 22s ease-in-out infinite alternate}
+/* When you add your photo, replace the .hero-bg background with:
+   background:url('YOUR-HERO-PHOTO.jpg') center/cover; and keep .hero-veil */
+.hero-veil{position:absolute;inset:0;background:linear-gradient(180deg,rgba(46,8,12,.55),rgba(46,8,12,.75))}
+@keyframes kenburns{from{transform:scale(1)}to{transform:scale(1.08)}}
+.hero-content{position:relative;z-index:2;max-width:820px}
+.hero-mark{width:74px;height:74px;margin:0 auto 22px;border:1px solid var(--gold);transform:rotate(45deg);display:flex;align-items:center;justify-content:center}
+.hero-mark span{transform:rotate(-45deg);font-family:var(--serif);font-size:34px;color:var(--gold-light)}
+.hero .eyebrow{color:var(--gold-light)}
+.hero h1{font-size:clamp(46px,8vw,86px);color:var(--ivory);font-weight:500;letter-spacing:1px}
+.hero h1 em{font-style:italic;color:var(--gold-light)}
+.hero .tagline{font-family:var(--serif);font-style:italic;font-size:clamp(18px,2.6vw,24px);color:#eadcc0;margin-top:14px}
+.badge-strip{display:flex;flex-wrap:wrap;justify-content:center;gap:0 26px;margin-top:30px;color:#e9dcc0;font-size:13px;letter-spacing:1.5px}
+.badge-strip span{padding:8px 0;display:flex;align-items:center;gap:26px}
+.badge-strip .dot{width:5px;height:5px;background:var(--gold);transform:rotate(45deg)}
+.hero-cta{margin-top:40px;display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+.btn{display:inline-block;padding:15px 36px;font-family:var(--sans);font-size:13px;letter-spacing:2.5px;text-transform:uppercase;text-decoration:none;transition:all .35s;cursor:pointer;border:1px solid var(--gold)}
+.btn-gold{background:linear-gradient(135deg,var(--gold),#b08d1e);color:#fff}
+.btn-gold:hover{background:var(--gold-light);color:var(--maroon);transform:translateY(-2px);box-shadow:0 10px 30px rgba(201,162,39,.35)}
+.btn-ghost{background:transparent;color:var(--gold-light)}
+.btn-ghost:hover{background:rgba(201,162,39,.15);transform:translateY(-2px)}
+.scroll-hint{position:absolute;bottom:26px;left:50%;transform:translateX(-50%);color:var(--gold-light);font-size:11px;letter-spacing:3px;z-index:2;animation:bob 2.4s ease-in-out infinite}
+@keyframes bob{0%,100%{transform:translate(-50%,0)}50%{transform:translate(-50%,8px)}}
+
+/* ---------- about ---------- */
+.about{background:var(--ivory)}
+.about-grid{display:grid;grid-template-columns:1fr 1.15fr;gap:60px;align-items:center}
+.photo-frame{position:relative;aspect-ratio:4/5;background:linear-gradient(150deg,#5d1019,#4A0E14 60%,#6B1420);display:flex;align-items:center;justify-content:center}
+.photo-frame::after{content:"";position:absolute;inset:14px;border:1px solid var(--gold)}
+.photo-frame .ph-label{color:#d9c295;font-family:var(--serif);font-style:italic;font-size:17px;text-align:center;padding:0 30px;z-index:1}
+.about-text p{margin-bottom:18px;color:#5c4a3f}
+.about-text .lede{font-family:var(--serif);font-size:22px;font-style:italic;color:var(--maroon-2)}
+@media(max-width:860px){.about-grid{grid-template-columns:1fr;gap:40px}}
+
+/* ---------- timeline (signature) ---------- */
+.journey{background:var(--maroon);position:relative;overflow:hidden}
+.journey::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 50% 0%,rgba(201,162,39,.12),transparent 60%)}
+.journey .eyebrow{color:var(--gold-light)}
+.journey .section-title{color:var(--ivory)}
+.timeline{position:relative;max-width:900px;margin:50px auto 0}
+.timeline::before{content:"";position:absolute;left:50%;top:0;bottom:0;width:1px;background:linear-gradient(180deg,transparent,var(--gold) 12%,var(--gold) 88%,transparent)}
+.milestone{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:60px;padding:44px 0;align-items:center}
+.milestone .year{font-family:var(--serif);font-size:clamp(56px,8vw,92px);color:transparent;-webkit-text-stroke:1px var(--gold);line-height:1;text-align:right}
+.milestone:nth-child(even) .year{order:2;text-align:left}
+.milestone:nth-child(even) .m-card{order:1}
+.milestone::after{content:"";position:absolute;left:50%;top:50%;width:11px;height:11px;background:var(--gold);transform:translate(-50%,-50%) rotate(45deg);box-shadow:0 0 0 6px rgba(201,162,39,.18)}
+.m-card{background:rgba(255,253,248,.05);border:1px solid rgba(201,162,39,.35);padding:26px 28px;backdrop-filter:blur(4px)}
+.m-card .m-photo{aspect-ratio:16/9;background:linear-gradient(140deg,#5d1019,#732030);border:1px solid rgba(201,162,39,.3);display:flex;align-items:center;justify-content:center;color:#d9c295;font-family:var(--serif);font-style:italic;font-size:14px;margin-bottom:16px}
+.m-card h3{color:var(--gold-light);font-size:22px;margin-bottom:8px}
+.m-card p{color:#e6d8bd;font-size:14px}
+@media(max-width:760px){
+  .timeline::before{left:18px}
+  .milestone{grid-template-columns:1fr;gap:14px;padding-left:48px}
+  .milestone .year,.milestone:nth-child(even) .year{text-align:left;order:0;font-size:52px}
+  .milestone:nth-child(even) .m-card{order:0}
+  .milestone::after{left:18px}
+}
+
+/* ---------- owner ---------- */
+.owner{background:var(--ivory)}
+.owner-grid{display:grid;grid-template-columns:340px 1fr;gap:56px;align-items:start}
+.owner-letter{font-family:var(--serif);font-size:19px;color:#4b382e;line-height:1.9}
+.owner-letter p{margin-bottom:20px}
+.owner-letter .salute{font-style:italic;color:var(--maroon-2)}
+.signature{font-family:var(--serif);font-style:italic;font-size:28px;color:var(--maroon);margin-top:10px}
+.signature small{display:block;font-family:var(--sans);font-style:normal;font-size:12px;letter-spacing:2px;color:var(--muted);text-transform:uppercase;margin-top:6px}
+@media(max-width:860px){.owner-grid{grid-template-columns:1fr}}
+
+/* ---------- events ---------- */
+.events{background:var(--cream)}
+.event-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:10px}
+.event-card{background:var(--ivory);border:1px solid #e8dcc4;padding:36px 26px;text-align:center;transition:all .4s;position:relative;overflow:hidden}
+.event-card::before{content:"";position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--gold),transparent);transform:scaleX(0);transition:transform .4s}
+.event-card:hover{transform:translateY(-6px);box-shadow:0 18px 40px rgba(74,14,20,.12);border-color:var(--gold)}
+.event-card:hover::before{transform:scaleX(1)}
+.event-ico{width:58px;height:58px;margin:0 auto 18px;border:1px solid var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--gold);transition:all .4s}
+.event-card:hover .event-ico{background:var(--gold);color:#fff;transform:rotate(360deg)}
+.event-ico svg{width:26px;height:26px;stroke:currentColor;fill:none;stroke-width:1.4}
+.event-card h3{font-size:21px;margin-bottom:6px}
+.event-card p{font-size:13.5px;color:var(--muted)}
+@media(max-width:900px){.event-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.event-grid{grid-template-columns:1fr}}
+
+/* ---------- venues ---------- */
+.venues{background:var(--ivory)}
+.venue-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:26px}
+.venue-card{border:1px solid #e8dcc4;background:var(--cream);transition:all .4s;overflow:hidden}
+.venue-card:hover{box-shadow:0 18px 40px rgba(74,14,20,.12);transform:translateY(-4px)}
+.venue-photo{aspect-ratio:16/9;background:linear-gradient(140deg,#4A0E14,#6B1420);display:flex;align-items:center;justify-content:center;color:#d9c295;font-family:var(--serif);font-style:italic}
+.venue-body{padding:26px 28px}
+.venue-body h3{font-size:24px;margin-bottom:8px}
+.venue-body p{font-size:14px;color:var(--muted)}
+.staff-note{margin-top:34px;text-align:center;font-family:var(--serif);font-size:20px;font-style:italic;color:var(--maroon-2);max-width:720px;margin-left:auto;margin-right:auto}
+@media(max-width:760px){.venue-grid{grid-template-columns:1fr}}
+
+/* ---------- counters ---------- */
+.stats{background:linear-gradient(135deg,#3a0a10,#4A0E14 55%,#5d1019);padding:70px 0}
+.stat-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:30px;text-align:center}
+.stat .num{font-family:var(--serif);font-size:clamp(36px,5vw,54px);color:var(--gold-light);line-height:1}
+.stat .lbl{margin-top:8px;font-size:11px;letter-spacing:2.5px;text-transform:uppercase;color:#dcccab}
+@media(max-width:860px){.stat-grid{grid-template-columns:repeat(2,1fr)}.stat-grid .stat:last-child{grid-column:1/-1}}
+
+/* ---------- gallery ---------- */
+.gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.g-item{aspect-ratio:1/1;background:linear-gradient(150deg,#5d1019,#4A0E14);position:relative;overflow:hidden;cursor:pointer;border:1px solid #e8dcc4;display:flex;align-items:center;justify-content:center}
+.g-item span{color:#d9c295;font-family:var(--serif);font-style:italic;font-size:14px;transition:transform .5s}
+.g-item:hover span{transform:scale(1.1)}
+.g-item img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.g-item:hover img{transform:scale(1.08)}
+@media(max-width:700px){.gallery-grid{grid-template-columns:repeat(2,1fr)}}
+.lightbox{position:fixed;inset:0;background:rgba(30,6,9,.94);z-index:200;display:none;align-items:center;justify-content:center;padding:30px}
+.lightbox.open{display:flex}
+.lightbox .lb-body{max-width:900px;color:#eadcc0;font-family:var(--serif);font-style:italic;font-size:22px;text-align:center}
+.lb-close{position:absolute;top:24px;right:30px;background:none;border:1px solid var(--gold);color:var(--gold-light);width:44px;height:44px;font-size:20px;cursor:pointer}
+
+/* ---------- reviews ---------- */
+.reviews{background:var(--maroon)}
+.reviews .eyebrow{color:var(--gold-light)}
+.reviews .section-title{color:var(--ivory)}
+.carousel{max-width:760px;margin:40px auto 0;position:relative;text-align:center}
+.slide{display:none;animation:fadeSlide .7s ease}
+.slide.active{display:block}
+@keyframes fadeSlide{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+.stars{color:var(--gold-light);font-size:20px;letter-spacing:4px}
+.quote{font-family:var(--serif);font-size:clamp(20px,3vw,26px);font-style:italic;color:#f2e7cd;margin:22px 0 18px;line-height:1.6}
+.reviewer{font-size:13px;letter-spacing:2px;text-transform:uppercase;color:var(--gold-light)}
+.reviewer small{display:block;color:#cbb98f;margin-top:4px;letter-spacing:1px;text-transform:none}
+.car-nav{margin-top:30px;display:flex;justify-content:center;gap:14px}
+.car-btn{width:46px;height:46px;border:1px solid var(--gold);background:transparent;color:var(--gold-light);font-size:18px;cursor:pointer;transition:all .3s}
+.car-btn:hover{background:var(--gold);color:var(--maroon)}
+
+/* ---------- reach ---------- */
+.reach{background:var(--cream)}
+.reach-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.reach-card{background:var(--ivory);border:1px solid #e8dcc4;padding:30px 26px;transition:all .4s}
+.reach-card:hover{border-color:var(--gold);transform:translateY(-4px);box-shadow:0 14px 34px rgba(74,14,20,.1)}
+.reach-card .r-ico{color:var(--gold);margin-bottom:14px}
+.reach-card .r-ico svg{width:30px;height:30px;stroke:currentColor;fill:none;stroke-width:1.4}
+.reach-card h3{font-size:20px;margin-bottom:6px}
+.reach-card p{font-size:13.5px;color:var(--muted)}
+@media(max-width:860px){.reach-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.reach-grid{grid-template-columns:1fr}}
+
+/* ---------- contact ---------- */
+.contact{background:var(--ivory)}
+.contact-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:50px;align-items:start}
+.c-info{display:flex;flex-direction:column;gap:22px}
+.c-row{display:flex;gap:16px;align-items:flex-start}
+.c-row .c-ico{width:46px;height:46px;flex:none;border:1px solid var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--gold)}
+.c-row .c-ico svg{width:20px;height:20px;stroke:currentColor;fill:none;stroke-width:1.5}
+.c-row h4{font-size:18px;margin-bottom:3px}
+.c-row p,.c-row a{font-size:14px;color:var(--muted);text-decoration:none}
+.c-row a:hover{color:var(--maroon)}
+.map-frame{margin-top:10px;border:1px solid var(--gold);padding:8px;background:var(--cream)}
+.map-frame iframe{width:100%;height:260px;border:0;display:block}
+form{background:var(--cream);border:1px solid #e8dcc4;padding:38px 34px}
+form h3{font-size:26px;margin-bottom:22px}
+.f-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.f-field{margin-bottom:16px}
+label{display:block;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+input,select,textarea{width:100%;padding:13px 14px;border:1px solid #ddcfb2;background:var(--ivory);font-family:var(--sans);font-size:14px;color:var(--ink);transition:border .3s}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--gold)}
+textarea{resize:vertical;min-height:110px}
+.form-note{font-size:12px;color:var(--muted);margin-top:12px}
+@media(max-width:860px){.contact-grid{grid-template-columns:1fr}.f-row{grid-template-columns:1fr}}
+
+/* ---------- footer ---------- */
+footer{background:#2c070b;color:#cbb98f;padding:54px 0 26px}
+.foot-grid{display:flex;flex-wrap:wrap;justify-content:space-between;gap:34px;align-items:flex-start}
+.foot-brand{font-family:var(--serif);font-size:26px;color:var(--gold-light)}
+.foot-brand small{display:block;font-family:var(--sans);font-size:10px;letter-spacing:3px;text-transform:uppercase;color:#a8946a;margin-top:4px}
+.foot-links{list-style:none;display:flex;gap:22px;flex-wrap:wrap}
+.foot-links a{color:#cbb98f;text-decoration:none;font-size:13px;transition:color .3s}
+.foot-links a:hover{color:var(--gold-light)}
+.socials{display:flex;gap:12px}
+.socials a{width:40px;height:40px;border:1px solid var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--gold-light);text-decoration:none;transition:all .3s}
+.socials a:hover{background:var(--gold);color:var(--maroon)}
+.socials svg{width:18px;height:18px;fill:currentColor}
+.copyright{text-align:center;margin-top:40px;padding-top:22px;border-top:1px solid rgba(201,162,39,.25);font-size:12px;letter-spacing:1px;color:#9c8a66}
+
+/* ---------- popup + whatsapp ---------- */
+.popup{position:fixed;inset:0;background:rgba(30,6,9,.6);z-index:300;display:none;align-items:center;justify-content:center;padding:24px}
+.popup.open{display:flex}
+.popup-card{background:var(--ivory);max-width:440px;width:100%;padding:44px 38px;text-align:center;position:relative;border-top:3px solid var(--gold);animation:popIn .5s cubic-bezier(.2,.9,.3,1.2)}
+@keyframes popIn{from{opacity:0;transform:scale(.85) translateY(20px)}to{opacity:1;transform:none}}
+.popup-card h3{font-size:28px;margin-bottom:10px}
+.popup-card p{font-size:14px;color:var(--muted);margin-bottom:24px}
+.popup-close{position:absolute;top:12px;right:14px;background:none;border:none;font-size:22px;color:var(--muted);cursor:pointer}
+.popup-actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.wa-float{position:fixed;bottom:24px;right:24px;z-index:150;width:58px;height:58px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 24px rgba(0,0,0,.3);transition:transform .3s;animation:pulse 2.6s infinite}
+.wa-float:hover{transform:scale(1.1)}
+.wa-float svg{width:30px;height:30px;fill:#fff}
+@keyframes pulse{0%,100%{box-shadow:0 8px 24px rgba(0,0,0,.3),0 0 0 0 rgba(37,211,102,.5)}50%{box-shadow:0 8px 24px rgba(0,0,0,.3),0 0 0 14px rgba(37,211,102,0)}}
+:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="#home" class="brand">Radhika Bhavan<small>The Banquet Hall</small></a>
+    <button class="nav-toggle" aria-label="Menu" onclick="document.querySelector('.nav-links').classList.toggle('open')">☰</button>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#journey">Our Journey</a></li>
+      <li><a href="#events">Events</a></li>
+      <li><a href="#venues">Venues</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero" id="home">
+  <div class="hero-bg"></div>
+  <div class="hero-veil"></div>
+  <div class="hero-content">
+    <div class="hero-mark"><span>R</span></div>
+    <p class="eyebrow">Waghodia Road · Vadodara · Since 2001</p>
+    <h1>Radhika <em>Bhavan</em></h1>
+    <p class="tagline">Celebrating Life's Moments Since 2001</p>
+    <div class="badge-strip">
+      <span>25 Years of Excellence <i class="dot"></i></span>
+      <span>1000+ Happy Weddings <i class="dot"></i></span>
+      <span>4.6★ on Google</span>
+    </div>
+    <div class="hero-cta">
+      <a class="btn btn-gold" href="#contact">Book Your Event</a>
+      <a class="btn btn-ghost" href="#contact">Contact Us</a>
+    </div>
+  </div>
+  <div class="scroll-hint">SCROLL ▾</div>
+</header>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="photo-frame reveal">
+        <p class="ph-label">Your banquet hall photo here<br>(replace this block with your image)</p>
+      </div>
+      <div class="about-text reveal">
+        <p class="eyebrow">About Us</p>
+        <h2 class="section-title">Our Story</h2>
+        <p class="lede">Since 2001, Radhika Bhavan has been the heart of celebrations on Waghodia Road, Vadodara.</p>
+        <p>For 25 proud years, we have hosted over 1000+ happy weddings and countless joyful occasions, earning a 4.6-star rating on Google — the highest on Waghodia Road and among the Top 10 banquet halls in Vadodara.</p>
+        <p>As one of the oldest and most trusted names in the area, we believe every celebration deserves perfection. From grand weddings to intimate family functions, our elegant halls, warm hospitality, and attention to every little detail make each event truly unforgettable.</p>
+        <p>At Radhika Bhavan, you don't just book a venue — you become part of our family. Our mission is simple: <em>to make your special day as perfect as you've always imagined.</em></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- JOURNEY TIMELINE -->
+<section class="journey" id="journey">
+  <div class="container center">
+    <p class="eyebrow reveal">Our Journey</p>
+    <h2 class="section-title reveal">25 Years of Growing With You</h2>
+    <div class="divider reveal"><span class="diamond"></span></div>
+    <div class="timeline">
+      <div class="milestone reveal">
+        <div class="year">2001</div>
+        <div class="m-card">
+          <div class="m-photo">Photo from 2001 goes here</div>
+          <h3>Where It All Began</h3>
+          <p>Our journey started with a single ground-floor hall and one big dream — to give every family a beautiful place to celebrate.</p>
+        </div>
+      </div>
+      <div class="milestone reveal">
+        <div class="year">2013</div>
+        <div class="m-card">
+          <div class="m-photo">Photo from 2013 goes here</div>
+          <h3>Growing With Our Community</h3>
+          <p>Word spread, families returned, and Radhika Bhavan became a trusted name for weddings and functions across Waghodia Road.</p>
+        </div>
+      </div>
+      <div class="milestone reveal">
+        <div class="year">2018</div>
+        <div class="m-card">
+          <div class="m-photo">Photo from 2018 goes here</div>
+          <h3>Expansion & New Facilities</h3>
+          <p>We expanded our venue with new halls, modern amenities, and comfortable guest rooms to serve our growing family of guests.</p>
+        </div>
+      </div>
+      <div class="milestone reveal">
+        <div class="year">2026</div>
+        <div class="m-card">
+          <div class="m-photo">Photo from 2026 goes here</div>
+          <h3>Radhika Bhavan Today</h3>
+          <p>Three elegant banquet halls, 15 guest rooms, our own disco setup, and 25 years of experience — ready for your celebration.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OWNER -->
+<section class="owner" id="owner">
+  <div class="container">
+    <div class="owner-grid">
+      <div class="photo-frame reveal" style="aspect-ratio:3/4">
+        <p class="ph-label">Owner's photograph here</p>
+      </div>
+      <div class="reveal">
+        <p class="eyebrow">A Word From The Owner</p>
+        <h2 class="section-title">Built With Love, Since 2001</h2>
+        <div class="owner-letter">
+          <p class="salute">Dear friends,</p>
+          <p>In 2001, I opened the doors of a small ground-floor hall with nothing but a dream — that every family in Waghodia should have a graceful place to celebrate their happiest days. I still remember our very first wedding: the lights, the music, the tears of joy.</p>
+          <p>Twenty-five years and more than a thousand weddings later, that dream has grown into three banquet halls and fifteen guest rooms — but our heart remains exactly the same. When you celebrate with us, you are not a customer. You are family.</p>
+          <p class="salute">With gratitude,</p>
+          <div class="signature">[Owner's Name]<small>Founder, Radhika Bhavan</small></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EVENTS -->
+<section class="events" id="events">
+  <div class="container center">
+    <p class="eyebrow reveal">Our Expertise</p>
+    <h2 class="section-title reveal">Every Celebration, Perfectly Hosted</h2>
+    <div class="divider reveal"><span class="diamond"></span></div>
+    <div class="event-grid">
+      <div class="event-card reveal"><div class="event-ico"><svg viewBox="0 0 24 24"><path d="M12 21s-7-4.6-9.5-9C.8 8.6 2.6 5 6 5c2 0 3.4 1.2 4 2.4h4c.6-1.2 2-2.4 4-2.4 3.4 0 5.2 3.6 3.5 7C19 16.4 12 21 12 21z" transform="scale(.9) translate(1.3 1)"/></svg></div><h3>Weddings</h3><p>Grand shaadis with every ritual honoured beautifully</p></div>
+      <div class="event-card reveal"><div class="event-ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="14" r="6"/><path d="M12 8V5m0 0l-2-2m2 2l2-2"/></svg></div><h3>Ring Ceremonies</h3><p>Elegant engagements & sagai celebrations</p></div>
+      <div class="event-card reveal"><div class="event-ico"><svg viewBox="0 0 24 24"><path d="M12 3c2 3 6 5 6 10a6 6 0 11-12 0c0-5 4-7 6-10z"/></svg></div><h3>Haldi & Mehndi</h3><p>Colourful pre-wedding functions full of joy</p></div>
+      <div class="event-card reveal"><div class="event-ico"><svg viewBox="0 0 24 24"><path d="M5 12h14v8H5zM12 12V7m0 0a2.5 2.5 0 10-2.5-2.5M12 7a2.5 2.5 0 112.5-2.5"/></svg></div><h3>Birthday Parties</h3><p>Memorable birthdays for all ages</p></div>
+      <div class="event-card reveal"><div class="event-ico"><svg viewBox="0 0 24 24"><path d="M9 21V10a3 3 0 016 0v11M6 21h12M12 3v2"/></svg></div><h3>Baby Showers</h3><p>Warm godh bharai & welcoming ceremonies</p></div>
+      <div class="event-card reveal"><div class="event-ico"><svg viewBox="0 0 24 24"><rect x="4" y="7" width="16" height="13" rx="1"/><path d="M9 7V5a3 3 0 016 0v2"/></svg></div><h3>Corporate Events</h3><p>Conferences, meetings & company functions</p></div>
+      <div class="event-card reveal"><div class="event-ico"><svg viewBox="0 0 24 24"><circle cx="8" cy="8" r="3"/><circle cx="16" cy="8" r="3"/><path d="M2 20c0-3 3-5 6-5s6 2 6 5M12 20c0-3 3-5 6-5"/></svg></div><h3>Get-Togethers</h3><p>Family reunions & community functions</p></div>
+      <div class="event-card reveal"><div class="event-ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M12 4v16M4 12h16M6.3 6.3l11.4 11.4M17.7 6.3L6.3 17.7"/></svg></div><h3>Disco / DJ Nights</h3><p>We have our own in-house disco setup!</p></div>
+      <div class="event-card reveal"><div class="event-ico"><svg viewBox="0 0 24 24"><path d="M12 2l2.5 6.5L21 9l-5 4.5L17.5 21 12 17l-5.5 4L8 13.5 3 9l6.5-.5z"/></svg></div><h3>All Kinds of Events</h3><p>Whatever the occasion, we host it with love</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- VENUES -->
+<section class="venues" id="venues">
+  <div class="container center">
+    <p class="eyebrow reveal">Our Venues & Facilities</p>
+    <h2 class="section-title reveal">Three Halls. Fifteen Rooms. One Family.</h2>
+    <div class="divider reveal"><span class="diamond"></span></div>
+    <div class="venue-grid">
+      <div class="venue-card reveal"><div class="venue-photo">Hall 1 photo here</div><div class="venue-body"><h3>[Hall Name 1]</h3><p>Our grand hall — perfect for large weddings and receptions.</p></div></div>
+      <div class="venue-card reveal"><div class="venue-photo">Hall 2 photo here</div><div class="venue-body"><h3>[Hall Name 2]</h3><p>An elegant space ideal for engagements and mid-size functions.</p></div></div>
+      <div class="venue-card reveal"><div class="venue-photo">Hall 3 photo here</div><div class="venue-body"><h3>[Hall Name 3]</h3><p>An intimate hall for birthdays, baby showers and family gatherings.</p></div></div>
+      <div class="venue-card reveal"><div class="venue-photo">Guest rooms photo here</div><div class="venue-body"><h3>15 Guest Rooms</h3><p>Comfortable stays for wedding families and outstation guests.</p></div></div>
+    </div>
+    <p class="staff-note reveal">"Behind every perfect event is our experienced, dedicated staff — taking care of every little detail so your family can simply celebrate."</p>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="stats">
+  <div class="container">
+    <div class="stat-grid">
+      <div class="stat reveal"><div class="num" data-count="25">0</div><div class="lbl">Years of Experience</div></div>
+      <div class="stat reveal"><div class="num" data-count="1000" data-suffix="+">0</div><div class="lbl">Happy Weddings</div></div>
+      <div class="stat reveal"><div class="num" data-count="3">0</div><div class="lbl">Banquet Halls</div></div>
+      <div class="stat reveal"><div class="num" data-count="15">0</div><div class="lbl">Guest Rooms</div></div>
+      <div class="stat reveal"><div class="num" data-count="4.6" data-decimal="1" data-suffix="★">0</div><div class="lbl">Google Rating</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="gallery" id="gallery">
+  <div class="container center">
+    <p class="eyebrow reveal">Gallery</p>
+    <h2 class="section-title reveal">Moments We've Hosted</h2>
+    <div class="divider reveal"><span class="diamond"></span></div>
+    <div class="gallery-grid">
+      <!-- To add your photos: replace <span>...</span> with <img src="your-photo.jpg" alt="..."> -->
+      <div class="g-item reveal" onclick="openLightbox(this)"><span>Wedding photo</span></div>
+      <div class="g-item reveal" onclick="openLightbox(this)"><span>Reception photo</span></div>
+      <div class="g-item reveal" onclick="openLightbox(this)"><span>Haldi function photo</span></div>
+      <div class="g-item reveal" onclick="openLightbox(this)"><span>Hall décor photo</span></div>
+      <div class="g-item reveal" onclick="openLightbox(this)"><span>Birthday photo</span></div>
+      <div class="g-item reveal" onclick="openLightbox(this)"><span>Stage décor photo</span></div>
+    </div>
+  </div>
+</section>
+<div class="lightbox" id="lightbox" onclick="this.classList.remove('open')">
+  <button class="lb-close" aria-label="Close">✕</button>
+  <div class="lb-body" id="lb-body"></div>
+</div>
+
+<!-- REVIEWS -->
+<section class="reviews" id="reviews">
+  <div class="container center">
+    <p class="eyebrow reveal">Testimonials</p>
+    <h2 class="section-title reveal">Rated 4.6★ — Highest on Waghodia Road, Top 10 in Vadodara</h2>
+    <div class="carousel reveal">
+      <div class="slide active">
+        <div class="stars">★★★★★</div>
+        <p class="quote">"Our daughter's wedding at Radhika Bhavan was a dream. The staff treated us like their own family and every arrangement was perfect."</p>
+        <p class="reviewer">[Customer Name]<small>Wedding · Replace with your real Google review</small></p>
+      </div>
+      <div class="slide">
+        <div class="stars">★★★★★</div>
+        <p class="quote">"Beautiful hall, delicious food, and such caring management. We have done three family functions here and always come back."</p>
+        <p class="reviewer">[Customer Name]<small>Reception · Replace with your real Google review</small></p>
+      </div>
+      <div class="slide">
+        <div class="stars">★★★★☆</div>
+        <p class="quote">"Best banquet on Waghodia Road. Spacious parking, great rooms for our outstation guests, and the disco night was a hit!"</p>
+        <p class="reviewer">[Customer Name]<small>Birthday Party · Replace with your real Google review</small></p>
+      </div>
+      <div class="car-nav">
+        <button class="car-btn" onclick="moveSlide(-1)" aria-label="Previous review">‹</button>
+        <button class="car-btn" onclick="moveSlide(1)" aria-label="Next review">›</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REACH -->
+<section class="reach" id="reach">
+  <div class="container center">
+    <p class="eyebrow reveal">How To Reach Us</p>
+    <h2 class="section-title reveal">Easy To Find, Close To Everything</h2>
+    <div class="divider reveal"><span class="diamond"></span></div>
+    <div class="reach-grid" style="text-align:left">
+      <div class="reach-card reveal"><div class="r-ico"><svg viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="13" rx="2"/><path d="M5 11h14M8 16l-2 4m12-4l2 4M9 7h.01M15 7h.01"/></svg></div><h3>Railway Station</h3><p>Vadodara Railway Station — approx. 17 km (about 35 min)</p></div>
+      <div class="reach-card reveal"><div class="r-ico"><svg viewBox="0 0 24 24"><path d="M2 16l20-6-9 8-2-4-4-1z"/><path d="M13 18l-2 4"/></svg></div><h3>Airport</h3><p>Vadodara Airport (Harni) — approx. 18 km (about 40 min)</p></div>
+      <div class="reach-card reveal"><div class="r-ico"><svg viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="16" rx="1"/><path d="M12 9v6M9 12h6"/></svg></div><h3>Hospitals Nearby</h3><p>Waghodia GMERS Hospital & SSG Hospital, Vadodara</p></div>
+      <div class="reach-card reveal"><div class="r-ico"><svg viewBox="0 0 24 24"><path d="M4 21V10l8-6 8 6v11M9 21v-6h6v6"/></svg></div><h3>Historical Sites</h3><p>Laxmi Vilas Palace, EME Temple, Champaner-Pavagadh (UNESCO)</p></div>
+      <div class="reach-card reveal"><div class="r-ico"><svg viewBox="0 0 24 24"><path d="M12 3c3 3 5 5.5 5 9a5 5 0 11-10 0c0-3.5 2-6 5-9zM12 17v4"/></svg></div><h3>Parks & Gardens</h3><p>Sayaji Baug (Kamati Baug) — Vadodara's famous garden</p></div>
+      <div class="reach-card reveal"><div class="r-ico"><svg viewBox="0 0 24 24"><path d="M12 21s-6-5.2-6-10a6 6 0 1112 0c0 4.8-6 10-6 10z"/><circle cx="12" cy="11" r="2"/></svg></div><h3>Our Location</h3><p>Ramvatika Society, Waghodia, Vadodara, Gujarat — 390019</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="container">
+    <div class="center">
+      <p class="eyebrow reveal">Get In Touch</p>
+      <h2 class="section-title reveal">Plan Your Celebration With Us</h2>
+      <div class="divider reveal"><span class="diamond"></span></div>
+    </div>
+    <div class="contact-grid">
+      <div class="c-info reveal">
+        <div class="c-row"><div class="c-ico"><svg viewBox="0 0 24 24"><path d="M12 21s-6-5.2-6-10a6 6 0 1112 0c0 4.8-6 10-6 10z"/><circle cx="12" cy="11" r="2"/></svg></div><div><h4>Address</h4><p>Ramvatika Society, Waghodia,<br>Vadodara, Gujarat, India – 390019</p></div></div>
+        <div class="c-row"><div class="c-ico"><svg viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 005 5L15 13l5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2z"/></svg></div><div><h4>Phone / WhatsApp</h4><p><a href="tel:+919879547315">+91 98795 47315</a><br><a href="tel:+918000108830">+91 80001 08830</a></p></div></div>
+        <div class="c-row"><div class="c-ico"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></div><div><h4>Email</h4><p><a href="mailto:radhikabhuvan23@gmail.com">radhikabhuvan23@gmail.com</a></p></div></div>
+        <div class="map-frame">
+          <iframe title="Radhika Bhavan location map" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps?q=Ramvatika%20Society%2C%20Waghodia%2C%20Vadodara%2C%20Gujarat%20390019&output=embed"></iframe>
+        </div>
+        <p style="font-size:12px;color:var(--muted)">Exact pin: <a href="https://maps.app.goo.gl/j8MjYSwTRUv4bND2A" target="_blank" rel="noopener" style="color:var(--maroon)">Open in Google Maps</a></p>
+      </div>
+      <form class="reveal" action="https://formsubmit.co/radhikabhuvan23@gmail.com" method="POST">
+        <h3>Send An Enquiry</h3>
+        <input type="hidden" name="_subject" value="New enquiry from Radhika Bhavan website">
+        <input type="hidden" name="_captcha" value="false">
+        <div class="f-row">
+          <div class="f-field"><label for="name">Your Name</label><input id="name" name="name" type="text" required placeholder="Full name"></div>
+          <div class="f-field"><label for="phone">Phone Number</label><input id="phone" name="phone" type="tel" required placeholder="+91"></div>
+        </div>
+        <div class="f-row">
+          <div class="f-field"><label for="email">Email</label><input id="email" name="email" type="email" placeholder="you@example.com"></div>
+          <div class="f-field"><label for="date">Event Date</label><input id="date" name="event_date" type="date"></div>
+        </div>
+        <div class="f-field"><label for="type">Event Type</label>
+          <select id="type" name="event_type">
+            <option>Wedding</option><option>Reception</option><option>Ring Ceremony / Engagement</option>
+            <option>Haldi / Mehndi</option><option>Birthday Party</option><option>Baby Shower</option>
+            <option>Corporate Event</option><option>Get-Together</option><option>DJ / Disco Night</option><option>Other</option>
+          </select>
+        </div>
+        <div class="f-field"><label for="msg">Message</label><textarea id="msg" name="message" placeholder="Tell us about your event — number of guests, requirements..."></textarea></div>
+        <button type="submit" class="btn btn-gold" style="width:100%">Send Inquiry</button>
+        <p class="form-note">Your enquiry goes directly to our email. We usually reply within a few hours. For urgent bookings, call or WhatsApp us anytime.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div><div class="foot-brand">Radhika Bhavan<small>The Banquet Hall · Since 2001</small></div></div>
+      <ul class="foot-links">
+        <li><a href="#about">About</a></li><li><a href="#journey">Journey</a></li>
+        <li><a href="#events">Events</a></li><li><a href="#gallery">Gallery</a></li>
+        <li><a href="#reviews">Reviews</a></li><li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="socials">
+        <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 3.3.1 4.8 1.7 4.9 4.9.1 1.3.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 3.2-1.6 4.8-4.9 4.9-1.3.1-1.6.1-4.9.1s-3.6 0-4.9-.1c-3.3-.1-4.8-1.7-4.9-4.9C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.8C2.4 4 4 2.4 7.2 2.3 8.4 2.2 8.8 2.2 12 2.2zm0 3.6a6.2 6.2 0 100 12.4 6.2 6.2 0 000-12.4zm0 10.2a4 4 0 110-8 4 4 0 010 8zm6.4-11.8a1.4 1.4 0 100 2.9 1.4 1.4 0 000-2.9z"/></svg></a>
+        <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M13.5 21v-8.2h2.8l.4-3.2h-3.2V7.6c0-.9.3-1.6 1.6-1.6h1.7V3.1c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3v2.3H7.3v3.2h2.8V21h3.4z"/></svg></a>
+        <a href="https://wa.me/919879547315" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 00-8.6 15L2 22l5.2-1.4A10 10 0 1012 2zm5.7 14.2c-.2.7-1.4 1.3-1.9 1.3-.5.1-1.1.1-1.8-.1-.4-.1-1-.3-1.7-.6-3-1.3-4.9-4.3-5.1-4.5-.1-.2-1.2-1.6-1.2-3s.7-2.1 1-2.4c.3-.3.6-.4.8-.4h.6c.2 0 .4-.1.7.5.2.6.8 2 .9 2.1.1.2.1.3 0 .5-.1.2-.2.4-.3.5l-.5.6c-.2.2-.3.4-.1.7.2.3.8 1.3 1.7 2.1 1.2 1.1 2.2 1.4 2.5 1.5.3.2.5.1.7-.1l1-1.1c.2-.3.4-.2.7-.1l2 .9c.3.2.5.2.6.4 0 .1 0 .6-.2 1.2z"/></svg></a>
+      </div>
+    </div>
+    <p class="copyright">© 2026 Radhika Bhavan – The Banquet Hall | Serving Celebrations Since 2001</p>
+  </div>
+</footer>
+
+<!-- POPUP -->
+<div class="popup" id="popup">
+  <div class="popup-card">
+    <button class="popup-close" onclick="closePopup()" aria-label="Close">✕</button>
+    <p class="eyebrow">25 Years of Experience</p>
+    <h3>Planning an Event?</h3>
+    <p>Get in touch today — our team will help you plan a celebration your family will remember forever.</p>
+    <div class="popup-actions">
+      <a class="btn btn-gold" href="https://wa.me/919879547315" target="_blank" rel="noopener" style="border-color:transparent">WhatsApp Us</a>
+      <a class="btn btn-ghost" href="tel:+919879547315" style="color:var(--maroon);border-color:var(--gold)">Call Now</a>
+    </div>
+  </div>
+</div>
+
+<!-- FLOATING WHATSAPP -->
+<a class="wa-float" href="https://wa.me/919879547315" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 00-8.6 15L2 22l5.2-1.4A10 10 0 1012 2zm5.7 14.2c-.2.7-1.4 1.3-1.9 1.3-.5.1-1.1.1-1.8-.1-.4-.1-1-.3-1.7-.6-3-1.3-4.9-4.3-5.1-4.5-.1-.2-1.2-1.6-1.2-3s.7-2.1 1-2.4c.3-.3.6-.4.8-.4h.6c.2 0 .4-.1.7.5.2.6.8 2 .9 2.1.1.2.1.3 0 .5-.1.2-.2.4-.3.5l-.5.6c-.2.2-.3.4-.1.7.2.3.8 1.3 1.7 2.1 1.2 1.1 2.2 1.4 2.5 1.5.3.2.5.1.7-.1l1-1.1c.2-.3.4-.2.7-.1l2 .9c.3.2.5.2.6.4 0 .1 0 .6-.2 1.2z"/></svg>
+</a>
+
+<script>
+// Scroll reveal
+const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target)}})},{threshold:.15});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+// Animated counters
+const cio=new IntersectionObserver(es=>{es.forEach(e=>{
+  if(!e.isIntersecting)return;
+  const el=e.target,target=parseFloat(el.dataset.count),dec=parseInt(el.dataset.decimal||0),suf=el.dataset.suffix||'';
+  const dur=1800,t0=performance.now();
+  (function tick(t){const p=Math.min((t-t0)/dur,1),v=target*(1-Math.pow(1-p,3));
+    el.textContent=v.toFixed(dec)+suf;
+    if(p<1)requestAnimationFrame(tick)})(t0);
+  cio.unobserve(el);
+})},{threshold:.5});
+document.querySelectorAll('.num').forEach(el=>cio.observe(el));
+
+// Reviews carousel
+let cur=0;const slides=document.querySelectorAll('.slide');
+function show(i){slides.forEach(s=>s.classList.remove('active'));slides[i].classList.add('active')}
+function moveSlide(d){cur=(cur+d+slides.length)%slides.length;show(cur)}
+setInterval(()=>moveSlide(1),6000);
+
+// Lightbox
+function openLightbox(item){
+  const lb=document.getElementById('lightbox'),body=document.getElementById('lb-body');
+  const img=item.querySelector('img');
+  body.innerHTML=img?'<img src="'+img.src+'" style="max-width:100%;max-height:80vh">':'<p>'+item.textContent+'<br><small style="font-size:14px">— your photo will appear here full-size once added</small></p>';
+  lb.classList.add('open');
+}
+
+// Popup after 4 seconds (once per visit)
+function closePopup(){document.getElementById('popup').classList.remove('open')}
+let popupShown=false;
+setTimeout(()=>{if(!popupShown){document.getElementById('popup').classList.add('open');popupShown=true}},4000);
+
+// Close menu on link click (mobile)
+document.querySelectorAll('.nav-links a').forEach(a=>a.addEventListener('click',()=>document.querySelector('.nav-links').classList.remove('open')));
+</script>
+</body>
+</html>
